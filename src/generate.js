@@ -3,7 +3,6 @@ var nouns = require('../data/nouns.json');
 var predicatePronouns = require('../data/predicate_pronouns.json');
 var subjectPronouns = require('../data/subject_pronouns.json');
 var verbs = require('../data/verbs.json');
-var tenses = require('../data/tenses.json');
 var predicates = require('../data/predicates.json');
 
 var randInt = function(a, b) {
@@ -38,14 +37,6 @@ var actions = {
 
   predicate_pronoun: function() {
     return randomElement(predicatePronouns);
-  },
-
-  verb: function() {
-    return randomElement(verbs);
-  },
-
-  tensed_verb: function() {
-    return template(randomElement(tenses), actions);
   },
 
   predicate: function() {

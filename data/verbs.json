@@ -59,7 +59,8 @@
   "arrive": {
     "present": "arrive",
     "past": "arrived",
-    "participle": "arrived"
+    "participle": "arrived",
+    "gerund": "arriving"
   },
   "happen": {
     "present": "happen",
@@ -74,7 +75,8 @@
   "put": {
     "present": "put",
     "past": "put",
-    "participle": "put"
+    "participle": "put",
+    "gerund": "putting"
   },
   "seem": {
     "present": "seem",
@@ -89,7 +91,8 @@
   "create": {
     "present": "create",
     "past": "created",
-    "participle": "created"
+    "participle": "created",
+    "gerund": "creating"
   },
   "speak": {
     "present": "speak",
@@ -104,12 +107,14 @@
   "leave": {
     "present": "leave",
     "past": "left",
-    "participle": "left"
+    "participle": "left",
+    "gerund": "leaving"
   },
   "continue": {
     "present": "continue",
     "past": "continued",
-    "participle": "continued"
+    "participle": "continued",
+    "gerund": "continuing"
   },
   "find": {
     "present": "find",
