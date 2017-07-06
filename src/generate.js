@@ -28,7 +28,8 @@ var template = function(templateString, actions) {
 
 var actions = {
   noun: function() {
-    return randomElement(nouns);
+    var article = Math.random() < 0.5 ? 'a' : 'the';
+    return article + ' ' + randomElement(nouns);
   },
 
   subject_pronoun: function() {
