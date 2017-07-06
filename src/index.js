@@ -6,6 +6,5 @@ var refresh = function() {
   sentenceContainer.innerText = generate();
 };
 
-var refreshButton = document.getElementById('refresh');
 document.addEventListener('click', refresh);
 refresh();
