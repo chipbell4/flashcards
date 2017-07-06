@@ -1,3 +1,4 @@
+var conjugate = require('./conjugate');
 var nouns = require('../data/nouns.json');
 var predicatePronouns = require('../data/predicate_pronouns.json');
 var subjectPronouns = require('../data/subject_pronouns.json');
@@ -5,9 +6,12 @@ var verbs = require('../data/verbs.json');
 var tenses = require('../data/tenses.json');
 var predicates = require('../data/predicates.json');
 
+var randInt = function(a, b) {
+  return Math.floor(Math.random() * (b - a) + a);
+};
+
 var randomElement = function(array) {
-  var i = Math.floor(Math.random() * array.length);
-  return array[i];
+  return array[randInt(0, array.length)];
 };
 
 var template = function(templateString, actions) {
@@ -49,6 +53,16 @@ var actions = {
 };
 
 module.exports = function() {
-  return template('{{ subject_pronoun }} {{ tensed_verb }} {{ predicate }}', actions);
+  var person = randInt(1, 4); // 1-3
+  var plural = Boolean(randInt(0, 2)); // true or false
+  var tense = randomElement(conjugate.TENSES); 
+
+  var pronoun = subjectPronouns[ person - 1 + Number(plural) * 3 ];
+  var stem = randomElement(Object.keys(verbs));
+  var conjugated = conjugate(stem, person, plural, tense);
+
+  return pronoun + ' ' + conjugated + ' ' + actions.predicate();
 };
+
+console.log(module.exports());
 

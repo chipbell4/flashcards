@@ -1,27 +1,124 @@
-[
-  "be",
-  "have",
-  "be",
-  "have",
-  "make/do",
-  "can",
-  "say",
-  "go",
-  "see",
-  "give",
-  "know",
-  "want",
-  "arrive",
-  "happen",
-  "should",
-  "put",
-  "seem",
-  "remain",
-  "create",
-  "speak",
-  "carry",
-  "leave",
-  "continue",
-  "find",
-  "call"
-]
+{
+  "be": {
+    "present" : ["am", "are", "is", "are", "are", "are"],
+    "past" : ["was", "were", "was", "were", "were", "were"],
+    "participle" : "been"
+  },
+  "have": {
+    "present" : "have",
+    "past" : "had",
+    "participle" : "had",
+    "gerund" : "having"
+  },
+  "make": {
+    "present": "make",
+    "past": "made",
+    "participle": "made",
+    "gerund": "making"
+  },
+  "can": {
+    "present": "can",
+    "past": "could",
+    "participle": "been able",
+    "gerund": "being able"
+  },
+  "say": {
+    "present" : "say",
+    "past" : "said",
+    "participle": "said",
+    "gerund": "saying"
+  },
+  "go": {
+    "present": "go",
+    "past": "went",
+    "participle": "gone",
+    "gerund": "going"
+  },
+  "see": {
+    "present": "see",
+    "past": "saw",
+    "participle": "seen",
+    "gerund": "seeing"
+  },
+  "give": {
+    "present": "give",
+    "past": "gave",
+    "participle": "given",
+    "gerund": "giving"
+  },
+  "know": {
+    "present": "know",
+    "past": "knew",
+    "participle": "known"
+  },
+  "want": {
+    "present": "want",
+    "past": "wanted",
+    "participle": "wanted"
+  },
+  "arrive": {
+    "present": "arrive",
+    "past": "arrived",
+    "participle": "arrived"
+  },
+  "happen": {
+    "present": "happen",
+    "past": "happened",
+    "participle": "happened"
+  },
+  "should": {
+    "present": "shall",
+    "past": "should",
+    "participle": "ought"
+  },
+  "put": {
+    "present": "put",
+    "past": "put",
+    "participle": "put"
+  },
+  "seem": {
+    "present": "seem",
+    "past": "seemed",
+    "participle": "seemed"
+  },
+  "remain": {
+    "present": "remain",
+    "past": "remained",
+    "participle": "remained"
+  },
+  "create": {
+    "present": "create",
+    "past": "created",
+    "participle": "created"
+  },
+  "speak": {
+    "present": "speak",
+    "past": "spoke",
+    "participle": "spoken"
+  },
+  "carry": {
+    "present": ["carry", "carry", "carries", "carry", "carry", "carry"],
+    "past": "carried",
+    "participle": "carried"
+  },
+  "leave": {
+    "present": "leave",
+    "past": "left",
+    "participle": "left"
+  },
+  "continue": {
+    "present": "continue",
+    "past": "continued",
+    "participle": "continued"
+  },
+  "find": {
+    "present": "find",
+    "past": "found",
+    "participle": "found"
+  },
+  "call": {
+    "present": "call",
+    "past": "called",
+    "participle": "called"
+  }
+}
