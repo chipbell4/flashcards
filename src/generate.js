@@ -1,4 +1,3 @@
-var Sentencer = require('sentencer');
 var nouns = require('../data/nouns.json');
 var predicatePronouns = require('../data/predicate_pronouns.json');
 var subjectPronouns = require('../data/subject_pronouns.json');
@@ -11,33 +10,45 @@ var randomElement = function(array) {
   return array[i];
 };
 
-Sentencer.configure({
-  nounList: nouns,
+var template = function(templateString, actions) {
+  Object.keys(actions).forEach(function(actionName) {
+    var actionFunction = actions[actionName];
+    var matcher = new RegExp('{{ ' + actionName + ' }}');
+    while(matcher.test(templateString)) {
+      templateString = templateString.replace(matcher, actionFunction());
+    }
+  });
 
-  actions: {
-    subject_pronoun: function() {
-      return randomElement(subjectPronouns);
-    },
+  return templateString;
+};
 
-    predicate_pronoun: function() {
-      return randomElement(predicatePronouns);
-    },
+var actions = {
+  noun: function() {
+    return randomElement(nouns);
+  },
 
-    verb: function() {
-      return randomElement(verbs);
-    },
+  subject_pronoun: function() {
+    return randomElement(subjectPronouns);
+  },
 
-    tensed_verb: function() {
-      return Sentencer.make(randomElement(tenses));
-    },
+  predicate_pronoun: function() {
+    return randomElement(predicatePronouns);
+  },
 
-    predicate: function() {
-      return Sentencer.make(randomElement(predicates));
-    },
-  }
-});
+  verb: function() {
+    return randomElement(verbs);
+  },
+
+  tensed_verb: function() {
+    return template(randomElement(tenses), actions);
+  },
+
+  predicate: function() {
+    return template(randomElement(predicates), actions);
+  },
+};
 
 module.exports = function() {
-  return Sentencer.make('{{ subject_pronoun }} {{ tensed_verb }} {{ predicate }}');
+  return template('{{ subject_pronoun }} {{ tensed_verb }} {{ predicate }}', actions);
 };
 
