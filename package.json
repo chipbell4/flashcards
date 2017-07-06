@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "browserify src/index.js > www/index.js"
+    "start": "browserify src/index.js > www/index.js"
   },
   "keywords": [],
   "author": "",
