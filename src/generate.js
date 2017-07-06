@@ -64,6 +64,3 @@ module.exports = function() {
 
   return pronoun + ' ' + conjugated + ' ' + actions.predicate();
 };
-
-console.log(module.exports());
-
