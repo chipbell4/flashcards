@@ -31,19 +31,13 @@ Sentencer.configure({
       return Sentencer.make(randomElement(tenses));
     },
 
-    subject: function() {
-      // TODO: Make this smarter
-      if(Math.random() < 0.5) {
-        return Sentencer.make('{{ a_noun }}');
-      } else {
-        return Sentencer.make('the {{ noun }}');
-      }
-    },
-
     predicate: function() {
       return Sentencer.make(randomElement(predicates));
     },
   }
 });
 
-console.log(Sentencer.make('{{ subject }} {{ tensed_verb }} {{ predicate }}'));
+module.exports = function() {
+  return Sentencer.make('{{ subject_pronoun }} {{ tensed_verb }} {{ predicate }}');
+};
+
