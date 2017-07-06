@@ -1,0 +1,19 @@
+{
+  "name": "translate-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "browserify src/index.js > www/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sentencer": "^0.1.5"
+  },
+  "devDependencies": {
+    "browserify": "^14.4.0"
+  }
+}
