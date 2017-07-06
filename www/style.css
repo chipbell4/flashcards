@@ -1,6 +1,17 @@
 body {
     text-align: center;
     font-size: 32px;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+p {
+    margin: 0;
 }
 
 @media(max-width: 720px) {
