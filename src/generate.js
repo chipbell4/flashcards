@@ -4,7 +4,7 @@ var predicatePronouns = require('../data/predicate_pronouns.json');
 var subjectPronouns = require('../data/subject_pronouns.json');
 var verbs = require('../data/verbs.json');
 var tenses = require('../data/tenses.json');
-var sentenceStructures = require('../data/sentence_structures.json');
+var predicates = require('../data/predicates.json');
 
 var randomElement = function(array) {
   var i = Math.floor(Math.random() * array.length);
@@ -32,13 +32,18 @@ Sentencer.configure({
     },
 
     subject: function() {
+      // TODO: Make this smarter
       if(Math.random() < 0.5) {
         return Sentencer.make('{{ a_noun }}');
       } else {
         return Sentencer.make('the {{ noun }}');
       }
     },
+
+    predicate: function() {
+      return Sentencer.make(randomElement(predicates));
+    },
   }
 });
 
-console.log(Sentencer.make('{{ subject }} {{ tensed_verb }}'));
+console.log(Sentencer.make('{{ subject }} {{ tensed_verb }} {{ predicate }}'));
