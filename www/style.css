@@ -1,0 +1,22 @@
+body {
+    text-align: center;
+    font-size: 32px;
+}
+
+@media(max-width: 720px) {
+    body {
+        font-size: 28px;
+    }
+}
+
+@media(max-width: 640px) {
+    body {
+        font-size: 24px;
+    }
+}
+
+@media(max-width: 500px) {
+    body {
+        font-size: 20px;
+    }
+}
