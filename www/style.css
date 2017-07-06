@@ -8,6 +8,9 @@ body {
     display: flex;
     justify-content: center;
     height: 100vh;
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: default;
 }
 
 p {
