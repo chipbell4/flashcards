@@ -16,12 +16,6 @@
     "participle": "made",
     "gerund": "making"
   },
-  "can": {
-    "present": "can",
-    "past": "could",
-    "participle": "been able",
-    "gerund": "being able"
-  },
   "say": {
     "present" : "say",
     "past" : "said",
@@ -66,11 +60,6 @@
     "present": "happen",
     "past": "happened",
     "participle": "happened"
-  },
-  "should": {
-    "present": "shall",
-    "past": "should",
-    "participle": "ought"
   },
   "put": {
     "present": "put",

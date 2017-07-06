@@ -49,6 +49,8 @@ module.exports = function() {
   var plural = Boolean(randInt(0, 2)); // true or false
   var tense = randomElement(conjugate.TENSES); 
 
+  // TODO: Deal with "could" and "should"
+
   var pronoun = subjectPronouns[ person - 1 + Number(plural) * 3 ];
   var stem = randomElement(Object.keys(verbs));
   var conjugated = conjugate(stem, person, plural, tense);
