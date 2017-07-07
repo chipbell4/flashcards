@@ -7,4 +7,9 @@ var refresh = function() {
 };
 
 document.addEventListener('click', refresh);
+document.addEventListener('keydown', function(evt) {
+  if(evt.keyCode === 13) {
+    refresh();
+  }
+})
 refresh();
