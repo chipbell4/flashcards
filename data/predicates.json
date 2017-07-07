@@ -1,8 +1,7 @@
 [
   "",
   "{{ predicate_pronoun }}",
-  "for {{ predicate_pronoun }}",
   "to {{ predicate_pronoun }}",
   "{{ noun }}",
-  "{{ noun }} for {{ predicate_pronoun }}"
+  "{{ noun }} to {{ predicate_pronoun }}"
 ]
