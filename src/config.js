@@ -39,4 +39,6 @@ module.exports = {
 
     return container;
   },
+
+  tenses: TENSES
 };

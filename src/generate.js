@@ -1,3 +1,4 @@
+var config = require('./config');
 var conjugate = require('./conjugate');
 var nouns = require('../data/nouns.json');
 var predicatePronouns = require('../data/predicate_pronouns.json');
@@ -47,7 +48,7 @@ var actions = {
 module.exports = function() {
   var person = randInt(1, 4); // 1-3
   var plural = Boolean(randInt(0, 2)); // true or false
-  var tense = randomElement(conjugate.TENSES); 
+  var tense = randomElement(config.tenses);
 
   // TODO: Deal with "could" and "should"
 

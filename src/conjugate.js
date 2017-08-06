@@ -1,19 +1,7 @@
 var pronouns = require('../data/subject_pronouns.json');
 var verbs = require('../data/verbs.json');
 
-var TENSES = [
-  'present',
-  'past',
-  'future',
-  'past imperfect',
-  'present perfect',
-  'past perfect',
-  'conditional',
-  'conditional perfect',
-  'continuous present',
-  'continuous past',
-  'continuous future'
-];
+var TENSES = require('./config.js').tenses;
 
 var conjugate = function(verb, person, plural, tense) {
   var subjectIndex = person - 1;
@@ -66,4 +54,3 @@ var conjugate = function(verb, person, plural, tense) {
 };
 
 module.exports = conjugate;
-module.exports.TENSES = TENSES;
