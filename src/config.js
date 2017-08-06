@@ -13,6 +13,19 @@ var TENSES = [
 ];
 
 module.exports = {
+  availableTenses: function() {
+    var filtered = TENSES.filter(function(tense) {
+      var id = tense.replace(/ /g, '-');
+      return document.getElementById(id).checked;
+    });
+
+    if(filtered.length === 0) {
+      return [TENSES[0]];
+    }
+
+    return filtered;
+  },
+
   buildAllCheckboxes: function() {
     var container = document.getElementById('tense-selection');
     TENSES.forEach(function(tense) {
@@ -33,6 +46,7 @@ module.exports = {
     var input = document.createElement('input');
     input.setAttribute('type', 'checkbox');
     input.id = idTense
+    input.checked = true;
 
     container.appendChild(label);
     container.appendChild(input);

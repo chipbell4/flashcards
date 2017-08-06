@@ -32,5 +32,5 @@ document.getElementById('tab').addEventListener('click', function(evt) {
   return false;
 });
 
-refresh();
 config.buildAllCheckboxes();
+refresh();

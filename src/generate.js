@@ -48,7 +48,7 @@ var actions = {
 module.exports = function() {
   var person = randInt(1, 4); // 1-3
   var plural = Boolean(randInt(0, 2)); // true or false
-  var tense = randomElement(config.tenses);
+  var tense = randomElement(config.availableTenses());
 
   // TODO: Deal with "could" and "should"
 
