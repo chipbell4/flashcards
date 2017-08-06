@@ -1,4 +1,5 @@
 var generate = require('./generate.js');
+var config = require('./config.js');
 
 var sentenceContainer = document.getElementById('sentence');
 
@@ -32,3 +33,4 @@ document.getElementById('tab').addEventListener('click', function(evt) {
 });
 
 refresh();
+config.buildAllCheckboxes();

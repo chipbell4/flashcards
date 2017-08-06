@@ -24,6 +24,7 @@ p {
     height: 75vh;
     width: 100vw;
 
+    box-sizing: border-box;
     text-align: center;
     background-color: #333;
     color: #eee;
@@ -39,6 +40,27 @@ p {
     color: black;
     top: -2em;
     right: 50%;
+}
+
+#config-container h2 {
+    margin: 0;
+    font-size: 26px;
+}
+
+#config-container #tense-selection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    font-size: 20px;
+}
+
+.checkbox-label {
+    margin-right: 0.5em;
+}
+
+.checkbox-container {
+    margin: 0.5em;
 }
 
 @media(max-width: 720px) {
