@@ -46,7 +46,18 @@ module.exports = {
     var input = document.createElement('input');
     input.setAttribute('type', 'checkbox');
     input.id = idTense
-    input.checked = true;
+
+    var localStorageKey = idTense + '-checked';
+    if(localStorage.getItem(localStorageKey) === null) {
+      localStorage.setItem(localStorageKey, true);
+      input.checked = true;
+    } else {
+      input.checked = localStorage.getItem(localStorageKey) === 'true';
+    }
+
+    input.addEventListener('change', function() {
+      localStorage.setItem(localStorageKey, input.checked);
+    });
 
     container.appendChild(label);
     container.appendChild(input);
