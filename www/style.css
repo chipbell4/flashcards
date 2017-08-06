@@ -17,6 +17,22 @@ p {
     margin: 0;
 }
 
+#config-container {
+    position: absolute;
+    transition: top 1s;
+    top: 100vh;
+    height: 50vh;
+    width: 100vw;
+
+    text-align: center;
+    background-color: #333;
+    color: #eee;
+}
+
+#config-container.showing {
+    top: 50vh;
+}
+
 @media(max-width: 720px) {
     body {
         font-size: 28px;
