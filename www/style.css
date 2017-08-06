@@ -34,6 +34,13 @@ p {
     top: 25vh;
 }
 
+#config-container #tab {
+    position: absolute;
+    color: black;
+    top: -2em;
+    right: 50%;
+}
+
 @media(max-width: 720px) {
     body {
         font-size: 28px;
